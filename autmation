@@ -1,0 +1,9 @@
+let records = input.config().duplication_check1 //.step2Records must match the Name field of the input field.
+
+let table = base.getTable("record_id"); // Replace with your table name.
+
+for (let record of records) {
+    await table.updateRecordAsync(record, {
+    "duplication_check1": "🔥 重複しています", //Replace Emailed with the field name of the checkbox field you want to update, if different.
+    })
+}
